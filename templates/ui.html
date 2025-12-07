@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video</title>
+    <style>
+
+      body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Raleway', sans-serif;
+      background-color: #f4f4f4;
+      }
+
+    body {
+        margin: 0;
+        width: 100%;
+        height: 60%;
+        font-family: "Exo", sans-serif;
+        color: #fff;
+        background: linear-gradient(19deg,  #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    div.sticky {
+        position: sticky;
+        top: 0;
+        padding: 5px;
+        background-color: black;
+        border: 2px solid black;
+        text-align:center;
+    }
+
+    h1 {
+        color: white;
+    }
+    .horizontal-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow wrapping if content exceeds width */
+}
+
+.horizontal-form div {
+  flex: 1;
+  margin-right: 10px; /* Adjust spacing between divs */
+}
+
+.horizontal-form div:last-child {
+  margin-right: 0; /* Remove margin from last div */
+}
+
+.horizontal-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.horizontal-form input[type="text"],
+.horizontal-form input[type="email"],
+.horizontal-form textarea {
+  width: calc(100% - 70px); /* Adjust width of input fields */
+}
+
+.horizontal-form input[type="submit"] {
+  width: 100%; /* Make submit button full width */
+  height: 50px;
+  align-items: center;
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 24px;
+  padding-left: 20px; /* Add padding from the left */
+  padding-right: 20px;
+  
+}
+
+.polygon-container {
+        width: 30%; /* Set each polygon container to occupy 30% of the width */
+        height: auto; /* Set a specific height for each polygon container */
+        display: inline-block; /* Allow the containers to align horizontally */
+        vertical-align: top; /* Align containers to the top */
+        padding: 10px;
+        margin-right: 2%; /* Add space between polygon containers */
+        text-align:center;
+    }
+
+    .polygon {
+      min-width: 250px;
+      max-width: 400px;
+      border-radius: 24px;
+      padding: 15px;
+      background-color: black;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align:center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+        /* Add borders for visualization */
+        padding: 1px;
+        margin-bottom: 1px;
+        height: 100%; /* Fill the entire height of the polygon container */
+    }
+
+    
+    </style>
+</head>
+
+
+<body>
+
+  <div class="sticky">
+    <h1><strong>Human Detection System</strong></h1>
+  </div>
+
+  <div class="box">
+   <form class="horizontal-form" action="/submit" method="POST" >
+    <div class="polygon-container">
+      <div class="polygon">
+      <!-- Input fields for polygon 1 vertices -->
+      <h2>Green Zone Vertices</h2>
+                <label for="p3x1">Vertex 1 X:</label>
+                <input type="text" id="p3x1" name="p3x1" value="430"><br>
+                <label for="p3y1">Vertex 1 Y:</label>
+                <input type="text" id="p3y1" name="p3y1" value="0"><br>
+
+                <label for="p3x2">Vertex 2 X:</label>
+                <input type="text" id="p3x2" name="p3x2" value="430"><br>
+                <label for="p3y2">Vertex 2 Y:</label>
+                <input type="text" id="p3y2" name="p3y2" value="472"><br>
+
+                <label for="p3x3">Vertex 3 X:</label>
+                <input type="text" id="p3x3" name="p3x3" value="614"><br>
+                <label for="p3y3">Vertex 3 Y:</label>
+                <input type="text" id="p3y3" name="p3y3" value="472"><br>
+
+                <label for="p3x4">Vertex 4 X:</label>
+                <input type="text" id="p3x4" name="p3x4" value="614"><br>
+                <label for="p3y4">Vertex 4 Y:</label>
+            <input type="text" id="p3y4" name="p3y4" value="0"><br><br>
+           
+      <!-- Add more input fields for other vertices of polygon 1 -->
+    </div>
+  </div>
+      <!-- Input fields for polygon 2 vertices -->
+
+
+      <div class="polygon-container">
+        <div class="polygon">
+          <h2>Orange Zone Vertices</h2>
+          <label for="p2x1">Vertex 1 X:</label>
+<input type="text" id="p2x1" name="p2x1" value="230"><br>
+<label for="p2y1">Vertex 1 Y:</label>
+<input type="text" id="p2y1" name="p2y1" value="0"><br>
+
+<label for="p2x2">Vertex 2 X:</label>
+<input type="text" id="p2x2" name="p2x2" value="230"><br>
+<label for="p2y2">Vertex 2 Y:</label>
+<input type="text" id="p2y2" name="p2y2" value="472"><br>
+
+<label for="p2x3">Vertex 3 X:</label>
+<input type="text" id="p2x3" name="p2x3" value="430"><br>
+<label for="p2y3">Vertex 3 Y:</label>
+<input type="text" id="p2y3" name="p2y3" value="472"><br>
+
+<label for="p2x4">Vertex 4 X:</label>
+<input type="text" id="p2x4" name="p2x4" value="430"><br>
+<label for="p2y4">Vertex 4 Y:</label>
+<input type="text" id="p2y4" name="p2y4" value="0"><br>
+
+      <!-- Add more input fields for other vertices of polygon 2 -->
+    </div>
+      </div>
+      <!-- Input fields for polygon 3 vertices -->
+
+      <div class="polygon-container">
+        <div class="polygon">
+          <h2>Red Zone Vertices</h2>
+          <label for="p1x1">Vertex 1 X:</label>
+        
+          <input type="text" id="p1x1" name="p1x1" value="0"><br>
+          <label for="p1y1">Vertex 1 Y:</label>
+          
+<input type="text" id="p1y1" name="p1y1" value="0"><br>
+<label for="p1x2">Vertex 2 X:</label>
+<input type="text" id="p1x2" name="p1x2" value="0"><br>
+<label for="p1y2">Vertex 2 Y:</label>
+<input type="text" id="p1y2" name="p1y2" value="472"><br>
+<label for="p1x3">Vertex 3 X:</label>
+<input type="text" id="p1x3" name="p1x3" value="230"><br>
+<label for="p1y3">Vertex 3 Y:</label>
+<input type="text" id="p1y3" name="p1y3" value="472"><br>
+<label for="p1x4">Vertex 4 X:</label>
+<input type="text" id="p1x4" name="p1x4" value="230"><br>
+<label for="p1y4">Vertex 4 Y:</label>
+<input type="text" id="p1y4" name="p1y4" value="0"><br>
+</div>
+
+</div>
+
+<input type="submit" value="Submit">
+    </form>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+
+    <style>
+            /* ADVERTISERS SERVICE CARD */
+    body {
+        font-family: "Roboto", sans-serif !important;
+        background-color:black;
+      }
+
+      .sec-icon {
+        position: relative;
+        display: inline-block;
+        padding: 0;
+        margin: 0 auto;
+      }
+
+      .sec-icon::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        left: -70px;
+        margin-top: -5.5px;
+        top: 60%;
+        background: #333333;
+        width: 50px;
+      }
+
+      .sec-icon::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        right: -70px;
+        margin-top: -5.5px;
+        top: 60%;
+        background: #333;
+        width: 50px;
+      }
+
+      .advertisers-service-sec {
+        background-color:#f5f5f5;
+      }
+
+      .advertisers-service-sec span {
+        color: rgb(255, 23, 131);
+      }
+
+      .advertisers-service-sec .col {
+        padding: 0 1em 1em 1em;
+        text-align: center;
+      }
+
+      .advertisers-service-sec .service-card {
+        width: 100%;
+        height: 100%;
+        padding: 2em 1.5em;
+        border-radius: 5px;
+        box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        transition: 0.5s;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        background:#f0f0f0
+      }
+
+      .advertisers-service-sec .service-card::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(19deg,  #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        position: absolute;
+        left: 0%;
+        top: -98%;
+        z-index: -2;
+        transition: all 0.4s cubic-bezier(0.77, -0.04, 0, 0.99);
+      }
+
+      .advertisers-service-sec h3 {
+        font-size: 20px;
+        text-transform: capitalize;
+        font-weight: 600;
+        color: #1f194c;
+        margin: 1em 0;
+        z-index: 3;
+      }
+
+      .advertisers-service-sec p {
+        color: #575a7b;
+        font-size: 15px;
+        line-height: 1.6;
+        letter-spacing: 0.03em;
+        z-index: 3;
+      }
+
+      .advertisers-service-sec .icon-wrapper {
+
+        position: relative;
+        margin: auto;
+        font-size: 30px;
+        height: 2.5em;
+        width: 2.5em;
+
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        transition: 0.5s;
+        z-index: 3;
+      }
+
+      .advertisers-service-sec .service-card:hover:after {
+        top: 0%;
+      }
+
+      .service-card .icon-wrapper {
+        background-image:url('C:\Users\Smita Deshpande\Downloads\ty_project\templates\yolov8.jpg');
+        
+        color: rgba(255, 77, 169, 0.961);
+      }
+
+      .advertisers-service-sec .service-card:hover .icon-wrapper {
+        color: #0dcaf0;
+      }
+
+      .advertisers-service-sec .service-card:hover h3 {
+        color:black;
+      }
+
+      .advertisers-service-sec .service-card:hover p {
+        color:#ffffff;
+      }
+      .center {
+        display:block;
+        width: 350%;
+      }
+
+      .centers {
+        display:block;
+        width: 190%;
+      }
+
+      .centerss {
+        display:block;
+        width: 150%;
+      }
+
+      /* ADVERTISERS SERVICE CARD ENDED */
+      .menu a {
+    display: inline-block;
+    margin: 0 10px;  /* Adjust the spacing between links */
+    text-decoration: none;  /* Remove underline */
+    padding: 5px 10px; /* Add padding for better clickable area */
+    color: white; /* Set link text color to white */
+    border-radius: 5px; /* Add rounded corners for better appearance */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.menu a:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}
+.menu a:hover h3{
+  color: black;
+}
+
+.menu h3{
+  color: white;
+}
+
+        .back-button {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+ .about-link {
+            color: white; /* Set the color to white */
+            font-size: 18px;
+        }
+        div.sticky {
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            background-color: black;
+            border: 2px solid black;
+            text-align: center;
+            color : white;
+        }
+    </style>
+</head>
+
+
+<body>
+<!-- ADVERTISERS SERVICE CARD -->
+<section id="advertisers" class="advertisers-service-sec pt-5 pb-5">
+    <div class="container">
+      <div class="sticky">
+            <h1>
+                <strong>Human Detection System</strong>
+                <br><br>
+                <div class="menu">
+                  <a href="#" onclick="history.back();" class="about-link" style="float: left;"><h2>< Back</h2></a>
+                  <!--<a href="/output" class="about-link"><h3><center>Home Page</center></h3></a>-->
+                  <a href="/about_us" class="about-link" style="color: white;"><h3><center>Model Info</center></h3></a>
+                  <a href="/red_table" class="about-link"><h3><center>Red Alert</center></h3></a>
+                  <a href="/orange_table" class="about-link"><h3><center>Orange Alert</center></h3></a>
+                  <a href="/logout" class="about-link" style="float: right;"><h2><center>Logout</center></h2></a>
+                   </div>
+            </h1>
+        </div>
+      <div class="row mt-5 mt-md-4 row-cols-1 row-cols-sm-1 row-cols-md-3 justify-content-center" style="background-color:black;">
+        
+  
+          <div class="col" style="text-align: left;">
+          <div class="service-card">
+            <div class="icon-wrapper">
+                <!-- <img src="algorithm.png" alt="Algorithm Image" class="centers"> -->
+                
+            </div>
+            <h1 style="text-align: center;color: black;"><b>Algorithm</b></h1>
+            <h2>
+            <p>
+              <b>1.	Import Libraries:</b>
+              <br>
+              &nbsp&nbsp&nbsp&nbsp
+•	Import necessary libraries including ultralytics, cv2 (OpenCV), numpy, shapely.geometry, psycopg2, datetime, pygame, and csv.
+              <br>
+              <br>
+              <b>2.	Define Functions:</b>
+              <br>&nbsp&nbsp&nbsp&nbsp
+•	insert_data_into_database: Connects to a PostgreSQL database and inserts data (timestamp, alert type, message, screenshot) into a specific table (pro_pids_table).
+<br>&nbsp&nbsp&nbsp&nbsp
+•	play_sound: Uses pygame to play a sound with a given frequency and duration.
+<br>&nbsp&nbsp&nbsp&nbsp
+•	fetch_data_from_database_and_write_to_csv: Connects to a PostgreSQL database, fetches data from a specified table (pro_pids_table), and writes the data to a CSV file.
+<br>&nbsp&nbsp&nbsp&nbsp
+•	video_detection: Performs video detection using YOLO on a specified video file. It takes several arguments including path to the video file, coordinates of three polygons, and performs detection within these polygons. 
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Depending on the detection results and the polygon where the object is detected, it inserts data into the database, saves screenshots, and plays sounds.
+
+<br>
+<br>
+<b>3.	Main Execution:</b>
+<br>&nbsp&nbsp&nbsp&nbsp
+•	Calls the fetch_data_from_database_and_write_to_csv function to fetch data from the database and write it to a CSV file.
+<br><br>
+
+
+<b>4.	Video Detection Loop:</b>
+<br>&nbsp&nbsp&nbsp&nbsp
+•	Reads frames from the video file specified in video_detection.
+<br>&nbsp&nbsp&nbsp&nbsp
+•	Draws polygons on the frames based on the provided coordinates.
+<br>&nbsp&nbsp&nbsp&nbsp
+•	Uses YOLO model to detect objects in the frame.
+<br>&nbsp&nbsp&nbsp&nbsp
+•	For each detected object:
+<br>&nbsp&nbsp&nbsp&nbsp
+•	Checks if it is a person.
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+•	Determines which polygon the person is detected in.
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+•	Draws rectangles around the detected person based on the polygon color.
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+•	Generates alert messages based on the polygon color.
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+•	Saves screenshots of the frame when a person is detected in a polygon.
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+•	Inserts data into the database with timestamp, alert type, message, and screenshot.
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+•	Plays a sound based on the polygon color.
+<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+•	Continues this process until all frames of the video are processed.
+
+<br><br>
+
+<b>5.	Cleanup:</b>
+<br>&nbsp&nbsp&nbsp&nbsp
+•	Releases video capture objects and destroys any remaining OpenCV windows.
+<br><br>
+
+
+                              
+</h2> </p>
+          </div>
+        </div>
+
+
+        <div class="col">
+          <div class="service-card">
+            <div class="icon-wrapper">
+                <!-- <img src="confusion_mat.png" alt="Algorithm Image" class="centers">  -->
+            </div>
+            <h1 style="text-align: center;color: black;"><b>Flowchart</b></h1>
+            <p>
+              <img src="{{ url_for('static', filename='images/flowchart.png') }}" width="1700px">
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="icon-wrapper">
+                <!-- <img src="confusion_mat.png" alt="Algorithm Image" class="centers">  -->
+            </div>
+            <h1 style="text-align: center;color: black;"><b>Accuracy</b></h1>
+            <p>
+              <img src="{{ url_for('static', filename='images/accuracy.png') }}">
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="icon-wrapper">
+                <!-- <img src="roc.png" alt="Algorithm Image" class="centerss"> -->
+            </div>
+            <h1 style="text-align: center;color: black;"><b>ROC Curve</b></h1>
+            <p>
+              <img src="{{ url_for('static', filename='images/ROC_curve.png') }}">
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="service-card">
+            <div class="icon-wrapper">
+                <!-- <img src="confusion_mat.png" alt="Algorithm Image" class="centers">  -->
+            </div>
+            <h1 style="text-align: center;color: black;"><b>Confusion Matrix</b></h1>
+            <p>
+              <img src="{{ url_for('static', filename='images/confusion_matrix.png') }}">
+            </p>
+          </div>
+        </div>
+        <div class="col" style="text-align: left;">
+          <div class="service-card">
+            <div class="icon-wrapper">
+              <i class="fa-solid fa-people-group"></i>
+            </div>
+            <h1 style="text-align: center;color: black;"><b>Pretrained Dataset : COCO </b></h1>
+            <h1>
+              <p>
+                <b style="display: block; text-align: center;">COCO Dataset</b>
+                <br><br>
+                The COCO (Common Objects in Context) dataset is a large-scale object detection, segmentation, and captioning dataset. It is designed to encourage research on a wide variety of object categories and is commonly used for benchmarking computer vision models. It is an essential dataset for researchers and developers working on object detection, segmentation, and pose estimation tasks.
+                <br><br><br>
+            
+                <b style="display: block; text-align: center;">
+                  Key Features
+                </b>
+                <br><br>
+                COCO contains 330K images, with 200K images having annotations for object detection, segmentation, and captioning tasks.
+                The dataset comprises 80 object categories, including common objects like cars, bicycles, and animals, as well as more specific categories such as umbrellas, handbags, and sports equipment.
+                Annotations include object bounding boxes, segmentation masks, and captions for each image.
+                COCO provides standardized evaluation metrics like mean Average Precision (mAP) for object detection, and mean Average Recall (mAR) for segmentation tasks, making it suitable for comparing model performance.
+                Dataset Structure
+                <br><br><br>
+            
+                <b style="display: block; text-align: center;">
+                  The COCO dataset is split into three subsets
+                </b>
+                <br><br>
+                Train2017 :
+                <br>&nbsp&nbsp&nbsp&nbsp This subset contains 118K images for training object detection, segmentation, and captioning models.
+                <br>
+                Val2017 : 
+                <br>&nbsp&nbsp&nbsp&nbsp This subset has 5K images used for validation purposes during model training.
+                <br>
+                Test2017: 
+                <br>&nbsp&nbsp&nbsp&nbsp This subset consists of 20K images used for testing and benchmarking the trained models. Ground truth annotations for this subset are not publicly available, and the results are submitted to the COCO evaluation server for performance evaluation.
+                <br><br><br>
+              </p>
+            </h1>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ADVERTISERS SERVICE CARD ENDED -->
+</body>
+</html>
