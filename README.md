@@ -42,9 +42,12 @@ All alerts—including timestamp, detected zone, and camera source—are securel
 
 ---
 
-## 🖼️ Screenshot (Add your image)
+## 🖼️ Screenshot
 
-Place your screenshot in the project folder and add it like this:
+![Screenshot](./Screenshot1.png)
+![Screenshot](./Screenshot2.png)
+![Screenshot](./Screenshot3.png)
+![Screenshot](./Screenshot4.png)
 
 ```md
-![System Screenshot](./screenshot.png)
+
